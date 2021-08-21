@@ -5,6 +5,8 @@ _base_ = [
 model = dict(
     backbone=dict(
         type='CBSwinTransformer',
+        # style='pytorch',
+        # init_cfg=dict(type='Pretrained', checkpoint='torchvision://resnet50'),
     ),
     neck=dict(
         type='CBFPN',
