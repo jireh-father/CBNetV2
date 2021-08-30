@@ -6,7 +6,7 @@ from matplotlib.collections import PatchCollection
 from matplotlib.patches import Polygon
 
 from ..utils import mask2ndarray
-font_path = "/home/ubuntu/HYHWPEQ.TTF"
+font_path = "/home/ubuntu/malgun.ttf"
 import os
 if os.path.isfile(font_path):
     print("loading korean font")
