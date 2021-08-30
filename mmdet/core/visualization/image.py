@@ -6,6 +6,13 @@ from matplotlib.collections import PatchCollection
 from matplotlib.patches import Polygon
 
 from ..utils import mask2ndarray
+font_path = "/home/ubuntu/HYHWPEQ.TTF"
+import os
+if os.path.isfile(font_path):
+    from matplotlib import font_manager, rc
+    font = font_manager.FontProperties(fname=font_path).get_name()
+    rc('font', family=font)
+
 
 EPS = 1e-2
 
