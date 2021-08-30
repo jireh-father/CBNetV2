@@ -10,10 +10,12 @@ font_path = "/home/ubuntu/HYHWPEQ.TTF"
 import os
 if os.path.isfile(font_path):
     print("loading korean font")
-    from matplotlib import font_manager, rc
-    font = font_manager.FontProperties(fname=font_path).get_name()
-    rc('font', family=font)
-
+    # from matplotlib import font_manager, rc
+    # font = font_manager.FontProperties(fname=font_path).get_name()
+    # rc('font', family=font)
+    fontprop = fm.FontProperties(fname=font_path)
+else:
+    fontprop = None
 
 EPS = 1e-2
 
@@ -157,7 +159,8 @@ def imshow_det_bboxes(img,
             color=text_color,
             fontsize=font_size,
             verticalalignment='top',
-            horizontalalignment='left')
+            horizontalalignment='left',
+            fontproperties=fontprop)
         if segms is not None:
             color_mask = mask_colors[labels[i]]
             mask = segms[i].astype(bool)
