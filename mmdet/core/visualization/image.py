@@ -10,10 +10,10 @@ font_path = "/home/ubuntu/HYHWPEQ.TTF"
 import os
 if os.path.isfile(font_path):
     print("loading korean font")
-    # from matplotlib import font_manager, rc
+    from matplotlib import font_manager
     # font = font_manager.FontProperties(fname=font_path).get_name()
     # rc('font', family=font)
-    fontprop = fm.FontProperties(fname=font_path)
+    fontprop = font_manager.FontProperties(fname=font_path)
 else:
     fontprop = None
 
